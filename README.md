@@ -14,7 +14,7 @@ A database management system (such as MySQL)
 
 First, clone the Laravel project repository from Git to your local machine. Open a terminal and run the following command:
 
-    - git clone <https://github.com/madhuraj2211/SwipeWireMultipleTodo.git>
+    - git clone https://github.com/madhuraj2211/SwipeWireMultipleTodo.git 
 
 ## Step 2: Install dependencies
 
