@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+html, body, #root, #defaultLayout, #guestLayout {
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #212121;
+    background-color: #f6f6f6;
+}
+
+.tasks {
+    height: 400px; /* Set a constant height */
+    overflow-y:scroll; /* Enable overflow in the X-direction */
+    width: 100%;
+}
+
+td{
+    word-wrap: break-word; /* break words that exceed the width of the div */
+    overflow-wrap: break-word; /* alternative syntax for word-wrap */
+}
+
+
+input {
+    outline: 0;
+    background: #ffffff;
+    width: 100%;
+    border: 2px solid #e6e6e6;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+input:focus {
+    border-color: #5b08a7;
+}
+
+.nav-bg { 
+    background-color: #5b08a7;
+}
+
+/* The scrollbar */
+::-webkit-scrollbar {
+    width: 5px; /* Set width of scrollbar */
+  }
+  
+  /* The thumb */
+  ::-webkit-scrollbar-thumb {
+    background: #02a232; /* Color of scrollbar thumb */
+  }
+  
+  /* The track */
+  ::-webkit-scrollbar-track {
+    visibility: collapse;
+    background: #eee; /* Color of scrollbar track */
+  }
+
+
+.text-center {
+    text-align: center;
+}
+
+
+
+
+
+
+.card {
+    background-color: #FFF;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+
+
+.notification {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 100;
+    padding: 1rem 1.5rem;
+    background-color: #00a762;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+
+
+.toggle-badge {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.toggle-badge:active {
+    transform: scale(1.2);
+}
+
+.toggle-badge.toggled {
+    animation-name: toggle-badge;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes toggle-badge {
+    0% {
+        background-color: #ffc107; /* badge-warning */
+        transform: scale(1);
+    }
+    50% {
+        background-color: #28a745; /* badge-success */
+        transform: scale(1.2);
+    }
+    100% {
+        background-color: #03500f; /* badge-warning */
+        transform: scale(1);
+    }
+}
