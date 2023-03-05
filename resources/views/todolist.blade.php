@@ -119,9 +119,9 @@
                             <th width="3%"> </th>
                             <th width="2%"> </th>
                         </thead>
-                        @foreach ($todo->tasks as $task)
+                        @foreach ($todo->tasks as $index => $task)
                             <tr >
-                                <td class="">{{$task->task}}</td>
+                                <td class="">{{++$index.'. '}} {{$task->task}}</td>
                                 <td class="text-nowrap">
                                     <div class="d-flex">
                                         <span class="mx-3">

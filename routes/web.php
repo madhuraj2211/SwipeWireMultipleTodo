@@ -20,7 +20,7 @@ use Illuminate\Auth\Events\Logout;
 */
 
 Route::get('/', function () {
-    return view('master');
+    return redirect('/login');
 });
 
 Route::group(['middleware' => 'isLoggedin'], function(){
